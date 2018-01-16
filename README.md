@@ -4,9 +4,9 @@ Paquet per **Python** que conté utilitats diverses relacionades amb Machine Lea
 
 ## Instal·lació
 
-### Directori / git
+### Directori / _Git_
 
-Per instal·lar/usar aquest paquet descarregar al directori on es vulgui instal·lar utilitzant git:
+Per instal·lar/utilitzar aquest paquet descarregar al directori on es vulgui instal·lar mitjançant _Git_:
 
 	$ git clone https://github.com/francesccapo/xesc_utils.git
 	
@@ -17,9 +17,9 @@ Per importar-lo a Python, utilitzar el següent codi:
     >>> import xesc as x
 
 
-### Pip
+### _Pip_
 
-Per instal·lar el paquet al sistema utilitzant pip executar:
+Per instal·lar el paquet al sistema utilitzant _Pip_, executar la comanda:
     
     $ pip install git+https://github.com/francesccapo/xesc_utils.git
     
