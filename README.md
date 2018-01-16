@@ -1,10 +1,10 @@
-#Xesc Utils
+# Xesc Utils
 
 Paquet per **Python** que conté utilitats diverses relacionades amb Machine Learning, processament de dades, eines matemàtiques i eines de visualització.
 
-##Instal·lació
+## Instal·lació
 
-###Directori / git
+### Directori / git
 
 Per instal·lar/usar aquest paquet descarregar al directori on es vulgui instal·lar utilitzant git:
 
@@ -17,7 +17,7 @@ Per importar-lo a Python, utilitzar el següent codi:
     >>> import xesc as x
 
 
-###Pip
+### Pip
 
 Per instal·lar el paquet al sistema utilitzant pip executar:
     
