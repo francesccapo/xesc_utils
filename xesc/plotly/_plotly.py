@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from plotly.offline import plot
 import plotly.graph_objs as go
 
