@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from sklearn.model_selection import StratifiedKFold
+import xgboost as xgb
 import numpy as np
 
 __all__ = ['cross_validation']
@@ -24,7 +25,7 @@ def cross_validation(df, target, num_folds=10):
     """
 
     if len(df) != len(target):
-        print 'El tamany de df i de target ha de ser igual'
+        print ('El tamany de df i de target ha de ser igual')
         return None
 
     skf = StratifiedKFold(n_splits=num_folds)
@@ -39,3 +40,32 @@ def cross_validation(df, target, num_folds=10):
                       'test_target': df.iloc[test]})
 
     return folds
+
+
+def train_test_xgboost(df_train, df_test, parameters = None, model=False, scores_test=False, accuracy=True):
+    """
+
+    df_train:
+        Df de train
+    df_test:
+        Df de test
+    parameters (optionals):
+        Diccionari amb parametres
+            https://xgboost.readthedocs.io/en/latest/parameter.html
+    model (False):
+        Return model?
+    scores_test (False):
+        Return test scores?
+    accuracy (True):
+        Return accuracy
+    return:
+        Diccionari amb els fields demanats
+    """
+
+    data_train = df_train.as_matrix()
+    label_train = df_train.columns.tolist()
+    label_train_integers = [i for i in range(df_train.shape[1])]
+    dtrain = xgb.DMatrix(data_train, label=label_train_integers)
+
+
+
