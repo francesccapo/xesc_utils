@@ -1,7 +1,9 @@
 import pickle
 import os
+import json
+import pandas as pd
 
-__all__ = ['save', 'load']
+__all__ = ['save', 'load', 'jsoncolumn_to_frame']
 
 def save(object, name='object.p', path='/Users/fcapo/Desktop/'):
 
@@ -25,3 +27,7 @@ def load(name, path='/Users/fcapo/Desktop/'):
         result = pickle.load(handle)
     return result
 
+def jsoncolumn_to_frame(s):
+    
+    return pd.DataFrame.from_records(s.apply(json.loads).values.tolist())
+    
